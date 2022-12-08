@@ -1,3 +1,3 @@
 # AppOrderFoodBasic
 Use SQLiteDataBase to stored data of UserLogin, FoodItem & HistoryOrder
-Compatible with virtual machine api 20 and above
+Compatible with virtual machine api 25 and above
