@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/food2"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ResetPassUserActivity">
+
+    <ImageView
+        android:id="@+id/back456"
+        android:layout_width="61dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nabila"
+        android:gravity="center"
+        android:text="Lấy lại mật khẩu"
+        android:textColor="@color/orange"
+        android:textSize="27dp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tài khoản: "
+            android:textColor="@color/orange"
+            android:textSize="30dp"
+            android:fontFamily="@font/nabila">
+        </TextView>
+        <TextView
+            android:id="@+id/username_reset_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tài khoản"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nabila"
+            android:textSize="25dp"
+            android:textStyle="italic">
+        </TextView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/password_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_reset_text"
+        android:layout_marginTop="50dp"
+        android:hint="Mật khẩu mới"
+        android:textColor="@color/black"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/repassword_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_reset"
+        android:layout_marginTop="50dp"
+        android:hint="Nhập lại mật khẩu mới"
+        android:textColor="@color/black"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/btnconfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/duongvien_xanh"
+        android:text="Đặt lại mật khẩu"
+        android:fontFamily="@font/nabila"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+</LinearLayout>

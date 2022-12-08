@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/food3"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/SearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/searchviewbg"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Here..." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_Food"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/SearchView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="3dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/action_search"
+        android:src="@drawable/user1"
+        app:backgroundTint="@color/orange"
+        tools:ignore="RelativeOverlap" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/dangxuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/user"
+        android:layout_alignEnd="@+id/user"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="33dp"
+        android:clickable="true"
+        android:contentDescription="@string/action_search"
+        android:focusable="true"
+        android:src="@drawable/dangxuat"
+        android:visibility="invisible"
+        app:backgroundTint="@color/white"
+        tools:ignore="RelativeOverlap" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/donhang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dangxuat"
+        android:layout_alignEnd="@+id/dangxuat"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-50dp"
+        android:clickable="true"
+        android:contentDescription="@string/action_search"
+        android:focusable="true"
+        android:src="@drawable/donhang"
+        android:visibility="invisible"
+        app:backgroundTint="@color/orange"
+        tools:ignore="RelativeOverlap" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dangxuat"
+        android:layout_alignEnd="@+id/dangxuat"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="21dp"
+        android:clickable="true"
+        android:contentDescription="@string/action_search"
+        android:focusable="true"
+        android:src="@drawable/history"
+        android:visibility="invisible"
+        app:backgroundTint="@color/orange"
+        tools:ignore="RelativeOverlap" />
+</RelativeLayout>

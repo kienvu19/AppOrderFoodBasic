@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bgfood"
+    android:padding="10dp"
+    tools:context=".CheckUserActivity">
+
+    <ImageView
+        android:id="@+id/back123"
+        android:layout_width="61dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nabila"
+        android:gravity="center"
+        android:text="Lấy lại mật khẩu"
+        android:textColor="@color/orange"
+        android:textSize="27dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/username_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/black"
+        android:hint="Tài khoản"
+        android:minHeight="48dp" />
+    <Button
+        android:id="@+id/btnreset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/duongvien_xanh"
+        android:layout_below="@+id/username_reset"
+        android:text="Xác nhận"
+        android:fontFamily="@font/nabila"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</LinearLayout>

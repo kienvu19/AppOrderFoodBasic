@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingTop="60dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/bgfood">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:text="Order Food"
+        android:textColor="@color/colorWhite"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nabila"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/nabila"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="Chào mừng bạn đến với ứng dụng đặt món ăn."
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLoginWelcom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/duongvien_xanh"
+        android:fontFamily="@font/nabila"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="@string/dangnhap"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnRegisterWelcom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/duongvien_trang"
+        android:fontFamily="@font/nabila"
+        android:textAllCaps="false"
+        android:text="@string/dangky"
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp" />
+
+
+
+</RelativeLayout>

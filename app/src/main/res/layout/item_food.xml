@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_food"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/img1">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <LinearLayout
+        android:id="@+id/layout_ten"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/img_food"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_nameFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/utm_pacific"
+            android:gravity="center"
+            android:hint="Tên món ăn"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"></TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_gia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/utm_pacific"
+                android:hint="Giá"
+                android:textColor="@color/black"
+                android:textSize="18dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/utm_pacific"
+                android:text="VND"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/layout_ten"
+        android:layout_toRightOf="@id/img_food"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_gt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_food"
+            android:fontFamily="@font/utm_pacific"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:hint="Gioi thieu"
+            android:textSize="15dp"></TextView>
+    </LinearLayout>
+
+
+</RelativeLayout>

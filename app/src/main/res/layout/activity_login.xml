@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingTop="90dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+
+    android:background="@drawable/food3">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nabila"
+        android:text="@string/dangnhap"
+        android:textColor="@color/colorBlue"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lnKhungDangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtUserLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:hint="Tài khoản"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="#FAF8F8"
+            android:textSize="30sp"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_email_black_36dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUserLog1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtPassLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="#FAF8F8"
+            android:textSize="30sp"
+            app:boxBackgroundColor="@color/colorGray"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/ic_lock_black_36dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassLog1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/ckbRemember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="@color/colorWhite"
+                android:outlineSpotShadowColor="@color/colorWhite"
+                android:paddingLeft="10dp"
+                android:text="Nhớ tài khoản"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/duongvien_xanh"
+                android:text="Đăng nhập"
+                android:fontFamily="@font/nabila"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Quên mật khẩu?"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Bạn chưa có tài khoản? Đăng ký ngay"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

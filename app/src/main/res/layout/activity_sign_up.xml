@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingTop="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/food2">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/nabila"
+        android:text="@string/dangky"
+        android:textColor="@color/colorBlue"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="120dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên đăng nhập"
+            android:textColorHint="@color/colorWhite"
+            android:id="@+id/txtUser"
+            android:textColor="@color/colorWhite"
+            app:boxBackgroundColor="@color/teal_700"
+            android:textSize="25sp"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/ic_email_black_36dp"
+            app:startIconDrawable="@drawable/ic_email_black_36dp"
+            android:drawablePadding="10dp" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUser2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:textColorHint="#FAF8F8"
+            android:id="@+id/txtPass"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:inputType="textPassword"
+            app:startIconDrawable="@drawable/ic_lock_black_36dp"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:endIconMode="password_toggle"
+            android:drawablePadding="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Xác nhận mật khẩu"
+            android:textColorHint="@color/colorPrimary"
+            android:id="@+id/txtRePass"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:inputType="text"
+            app:startIconDrawable="@drawable/ic_lock_black_36dp"
+            app:endIconMode="password_toggle"
+            android:drawablePadding="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtRePass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/duongvien_xanh"
+                android:text="@string/dangky"
+                android:fontFamily="@font/nabila"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/login"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Bạn đã có tài khoản? Đăng nhập ngay"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
