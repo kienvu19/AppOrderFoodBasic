@@ -68,14 +68,14 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:fontFamily="@font/utm_pacific"
-                android:text="VND"
-                android:textColor="@color/black"
-                android:textStyle="italic"></TextView>
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:fontFamily="@font/utm_pacific"-->
+<!--                android:text="VND"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="italic"></TextView>-->
         </LinearLayout>
     </RelativeLayout>
 

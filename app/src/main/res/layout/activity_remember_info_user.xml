@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgfood"
     android:orientation="vertical"
-    tools:context=".PaymentFood">
+    tools:context=".RememberInfoUserActivity">
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/back789"
         android:layout_width="61dp"
         android:layout_height="58dp"
         android:layout_marginLeft="15dp"
@@ -17,13 +17,12 @@
         android:src="@drawable/back" />
 
     <TextView
-        android:id="@+id/gototheinfouser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/back"
         android:fontFamily="@font/nabila"
         android:gravity="center"
-        android:text="Thông tin thanh toán"
+        android:text="Thông tin"
         android:textColor="@color/orange"
         android:textSize="27dp"
         android:textStyle="bold" />
@@ -31,8 +30,10 @@
     <RelativeLayout
         android:gravity="center"
         android:id="@+id/layoutchinh"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_gravity="center"
-        android:layout_margin="5dp"
+        android:layout_marginTop="90dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -49,7 +50,7 @@
                 android:textSize="25dp" />
 
             <EditText
-                android:id="@+id/user_name"
+                android:id="@+id/saveuser_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -75,7 +76,7 @@
                 android:text="Địa chỉ: "
                 android:textSize="25dp" />
             <EditText
-                android:id="@+id/address_user"
+                android:id="@+id/saveaddress_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -100,7 +101,7 @@
                 android:text="SĐT: "
                 android:textSize="25dp" />
             <EditText
-                android:id="@+id/numberphone_user"
+                android:id="@+id/savenumberphone_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -111,70 +112,8 @@
                 android:hint="Số điện thoại"
                 android:textSize="25dp" />
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/layout4"
-            android:layout_below="@id/layout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/discount"
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/utm_pacific"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content"
-                android:text="Mã giảm giá:  "
-                android:textSize="25dp" />
-            <EditText
-                android:id="@+id/edt_discount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/textmonan"
-                android:fontFamily="@font/utm_pacific"
-                android:hint="Discount"
-                android:textSize="25dp" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/layout5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/layout4">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/utm_pacific"
-                android:textColor="@color/black"
-                android:text="Hình thức thanh toán:  "
-                android:textSize="25dp" />
-
-            <RadioGroup
-                android:id="@+id/radiogr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="match_parent"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/utm_pacific"
-                    android:text="Tiền mặt"
-                    android:textSize="20dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:fontFamily="@font/utm_pacific"
-                    android:text="Thẻ ngân hàng"
-                    android:textSize="20dp" />
-            </RadioGroup>
-        </LinearLayout>
     </RelativeLayout>
     <LinearLayout
         android:layout_marginTop="5dp"
@@ -182,38 +121,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/total_price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tổng"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:fontFamily="@font/utm_pacific"
-            android:textSize="30dp">
-        </TextView>
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="VND"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:gravity="center"-->
-<!--            android:fontFamily="@font/utm_pacific"-->
-<!--            android:textSize="20dp">-->
-<!--        </TextView>-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/logopayment"/>
         <Button
-            android:id="@+id/payment"
+            android:id="@+id/saveinfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/nabila"
             android:background="@drawable/duongvien_xanh"
-            android:text="Thanh toán"
+            android:text="Lưu thông tin"
             android:textColor="@color/black"
             android:textAllCaps="false"
             android:textSize="25sp" />

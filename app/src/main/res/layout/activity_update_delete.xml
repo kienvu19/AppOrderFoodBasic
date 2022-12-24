@@ -136,16 +136,16 @@
                     android:textStyle="bold"
                     android:hint="Giá"
                     android:textSize="40dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="VND"
-                    android:textSize="30dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/utm_pacific">
-                </TextView>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="VND"-->
+<!--                    android:textSize="30dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:fontFamily="@font/utm_pacific">-->
+<!--                </TextView>-->
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

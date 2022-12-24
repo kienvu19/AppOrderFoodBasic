@@ -25,7 +25,7 @@
         android:text="Đặt món"
         android:textColor="@color/orange"
         android:textSize="27dp"
-        android:textStyle="bold"></TextView>
+        android:textStyle="bold" />
 
 
     <LinearLayout
@@ -67,15 +67,15 @@
             android:hint="Giá tiền"
             android:textColor="@color/black"
             android:textSize="30dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_nameFood"
-            android:fontFamily="@font/utm_pacific"
-            android:gravity="center"
-            android:text="VND"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/tv_nameFood"-->
+<!--            android:fontFamily="@font/utm_pacific"-->
+<!--            android:gravity="center"-->
+<!--            android:text="VND"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="20dp" />-->
     </LinearLayout>
 
     <RelativeLayout
@@ -124,12 +124,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/layout_SL"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:orientation="vertical">
 

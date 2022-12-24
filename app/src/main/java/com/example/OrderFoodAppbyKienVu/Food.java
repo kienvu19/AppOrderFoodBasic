@@ -1,6 +1,9 @@
 package com.example.OrderFoodAppbyKienVu;
 
 import java.io.Serializable;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Food implements Serializable{
 
     private int image;
@@ -14,7 +17,9 @@ public class Food implements Serializable{
     public Food(int image, String name, int gia, String gioithieu) {
         this.image = image;
         this.name = name;
+
         this.gia = gia;
+
         this.gioithieu = gioithieu;
     }
 

@@ -45,22 +45,20 @@ public class ResetPassUserActivity extends AppCompatActivity {
                 String user = username.getText().toString();
                 String password = pass.getText().toString();
                 String repassword = repass.getText().toString();
-                if(password.equals(repassword))
-                {
+                if(password.length() < 8){
+                    Toast.makeText(ResetPassUserActivity.this, "Mật khẩu không nhỏ hơn 8 ký tự.", Toast.LENGTH_SHORT).show();
+                }
+                else if(password.equals(repassword)){
                     Boolean checkpasswordupdate = DB.updatepassword(user,password);
-                    if (checkpasswordupdate)
-                    {
-                        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                    if (checkpasswordupdate) {
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(intent);
-
                         Toast.makeText(ResetPassUserActivity.this, "Cập nhật mật khẩu thành công!", Toast.LENGTH_SHORT).show();
-                    }else
-                    {
+                    }else{
                         Toast.makeText(ResetPassUserActivity.this, "Cập nhật mật khẩu thất bại.", Toast.LENGTH_SHORT).show();
                     }
-                }else
-                {
-                    Toast.makeText(ResetPassUserActivity.this, "Mật khẩu không chính xác", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(ResetPassUserActivity.this, "Mật khẩu không giống nhau", Toast.LENGTH_SHORT).show();
                 }
             }
         });

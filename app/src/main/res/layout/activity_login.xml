@@ -60,9 +60,11 @@
             android:textColor="@color/colorWhite"
             android:textColorHint="#FAF8F8"
             android:textSize="30sp"
+            app:hintEnabled="true"
+            app:counterEnabled="true"
             app:boxBackgroundColor="@color/colorGray"
             app:endIconMode="password_toggle"
-            app:startIconDrawable="@drawable/ic_lock_black_36dp">
+            app:startIconDrawable="@drawable/ic_pass">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtPassLog1"

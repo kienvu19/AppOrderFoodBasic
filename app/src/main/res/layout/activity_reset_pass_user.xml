@@ -45,31 +45,52 @@
             android:hint="Tài khoản"
             android:gravity="center"
             android:textColor="@color/black"
-            android:fontFamily="@font/nabila"
-            android:textSize="25dp"
-            android:textStyle="italic">
+            android:fontFamily="@font/utm_pacific"
+            android:textSize="30dp"
+            android:textStyle="bold">
         </TextView>
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/password_reset"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/username_reset_text"
-        android:layout_marginTop="50dp"
-        android:hint="Mật khẩu mới"
-        android:textColor="@color/black"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/repassword_reset"
+        android:layout_marginTop="60dp"
+        android:hint="Mật khẩu"
+        android:textColorHint="#FAF8F8"
+        android:id="@+id/txtPass"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:inputType="textPassword"
+        app:startIconDrawable="@drawable/ic_pass"
+        app:hintEnabled="true"
+        app:counterEnabled="true"
+        app:boxBackgroundColor="@color/purple_500"
+        app:endIconMode="password_toggle"
+        android:drawablePadding="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password_reset"
-        android:layout_marginTop="50dp"
-        android:hint="Nhập lại mật khẩu mới"
-        android:textColor="@color/black"
-        android:minHeight="48dp" />
+        android:hint="Xác nhận mật khẩu"
+        android:textColorHint="@color/colorPrimary"
+        android:id="@+id/txtRePass"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:inputType="text"
+        app:hintEnabled="true"
+        app:counterEnabled="true"
+        app:startIconDrawable="@drawable/ic_pass"
+        app:endIconMode="password_toggle"
+        android:drawablePadding="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/repassword_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnconfirm"

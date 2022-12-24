@@ -58,15 +58,15 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/utm_pacific"
-            android:gravity="center"
-            android:text="VND"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/utm_pacific"-->
+<!--            android:gravity="center"-->
+<!--            android:text="VND"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold" />-->
 
         <Button
             android:id="@+id/delete_all"

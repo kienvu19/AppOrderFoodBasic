@@ -2,6 +2,7 @@ package  com.example.OrderFoodAppbyKienVu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -87,6 +88,7 @@ public class HistoryOderFood extends AppCompatActivity {
             return 0;
         }
 
+        @SuppressLint("ViewHolder")
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             TextView id,hoten,diachi,sdt,magiamgia,hinhthuctt,tongtien;

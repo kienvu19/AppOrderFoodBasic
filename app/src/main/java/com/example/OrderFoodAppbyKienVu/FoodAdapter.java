@@ -3,6 +3,8 @@ package com.example.OrderFoodAppbyKienVu;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.icu.text.NumberFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,14 +14,21 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+@RequiresApi(api = Build.VERSION_CODES.N)
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder>{
     private List<Food> mlistFoods;
+
+    Locale localeVN = new Locale("vi", "VN");
+    NumberFormat currencyVN = NumberFormat.getCurrencyInstance(localeVN);
+
     @SuppressLint("NotifyDataSetChanged")
     public void setFilteredList(List<Food> filteredList){
         this.mlistFoods = filteredList;
@@ -45,7 +54,8 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         }
         holder.imgFood.setImageResource(food.getImage());
         holder.tvName.setText(food.getName());
-        holder.tvGia.setText(String.valueOf(food.getGia()));
+//        holder.tvGia.setText(String.valueOf(food.getGia()));
+        holder.tvGia.setText(currencyVN.format(food.getGia()));
         holder.tvGt.setText(food.getGioithieu());
         holder.layout_item.setOnClickListener(view -> onClickGoToDetail(food));
         holder.layout_item.startAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.anim_four));

@@ -1,7 +1,9 @@
 package com.example.OrderFoodAppbyKienVu;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -10,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -19,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -28,13 +32,19 @@ import kotlin.Lazy;
 public class MainActivity extends AppCompatActivity{
     private FoodAdapter foodAdapter;
     private List<Food> list;
-    private FloatingActionButton user_btn, dangxuat, shopping, history;
+    private FloatingActionButton user_btn, dangxuat, shopping, history, gotouser;
     Animation fabOpen, fabClose, Foward, BackFoward;
     Boolean show_hide_floatAction = false;
+    @SuppressLint("MissingInflatedId")
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Locale localeVN = new Locale("vi", "VN");
+        NumberFormat currencyVN = NumberFormat.getCurrencyInstance(localeVN);
+
         SearchView searchView = findViewById(R.id.SearchView);
         searchView.clearFocus();
         RecyclerView rc_Foods = findViewById(R.id.rc_Food);
@@ -42,6 +52,9 @@ public class MainActivity extends AppCompatActivity{
         dangxuat = findViewById(R.id.dangxuat);
         shopping = findViewById(R.id.donhang);
         history = findViewById(R.id.history);
+
+        gotouser = findViewById(R.id.gotouser);
+
         fabOpen = AnimationUtils.loadAnimation(this,R.anim.rotate_open);
         fabClose = AnimationUtils.loadAnimation(this,R.anim.rotate_close);
         Foward = AnimationUtils.loadAnimation(this,R.anim.to_bottom);
@@ -54,23 +67,28 @@ public class MainActivity extends AppCompatActivity{
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         rc_Foods.addItemDecoration(itemDecoration);
 
-//        rc_Foods.addOnScrollListener(new RecyclerView.OnScrollListener() {
-//            @Override
-//            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-//                if(dy > 0){
-//                    user_btn.hide();
-//                }else{
-//                    user_btn.show();
-//                }
-//                super.onScrolled(recyclerView, dx, dy);
-//            }
-//        });
+        rc_Foods.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                if(dy > 0){
+                    user_btn.hide();
+                    dangxuat.hide();
+                    shopping.hide();
+                    history.hide();
+                    gotouser.hide();
+                }else{
+                    user_btn.show();
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
 
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public boolean onQueryTextChange(String newText) {
                 filterList(newText);
@@ -99,7 +117,15 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(new Intent(MainActivity.this, HistoryOderFood.class));
             }
         });
+
+        gotouser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RememberInfoUserActivity.class));
+            }
+        });
     }
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void filterList(String Text){
         List<Food> filteredList = new ArrayList<>();
         for(Food food : list){
@@ -162,20 +188,13 @@ public class MainActivity extends AppCompatActivity{
         list.add(new Food(R.drawable.samdua, "Sâm Dứa", 30000, "..."));
         return list;
     }
-//    private void show(){
-//        dangxuat.show();
-//        shopping.show();
-//    }
-//    private void hide(){
-//        dangxuat.hide();
-//        shopping.hide();
-//    }
     private void animateFAB(){
         if(show_hide_floatAction){
             user_btn.startAnimation(Foward);
             dangxuat.startAnimation(fabClose);
             shopping.startAnimation(fabClose);
             history.startAnimation(fabClose);
+            gotouser.startAnimation(fabClose);
             dangxuat.setClickable(false);
             shopping.setClickable(false);
             show_hide_floatAction = false;
@@ -184,6 +203,7 @@ public class MainActivity extends AppCompatActivity{
             dangxuat.startAnimation(fabOpen);
             shopping.startAnimation(fabOpen);
             history.startAnimation(fabOpen);
+            gotouser.startAnimation(fabOpen);
             dangxuat.setClickable(true);
             shopping.setClickable(true);
             show_hide_floatAction = true;

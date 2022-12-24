@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.text.DecimalFormat;
+
 public class DBHelper extends SQLiteOpenHelper {
     private final Context context;
     private static final String DATABASE_NAME = "FoodApp.db";
@@ -30,7 +32,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_TITLE + " TEXT, " +
                 COLUMN_SL + " TEXT, " +
-                COLUMN_PRICE + " INTEGER);";
+                COLUMN_PRICE + " REAL);";
         db.execSQL(query);
     }
     @Override
@@ -62,7 +64,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return cursor;
     }
-    public void updateData(String row_id, String title, String sl, int price){
+    public void updateData(String row_id, String title, String sl, String price){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_TITLE, title);
@@ -71,9 +73,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
         if(result == -1){
-            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Cập nhật món ăn thất bại!", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(context, "Updated Successfully!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Cập nhật món ăn thành công!", Toast.LENGTH_SHORT).show();
         }
     }
     public void deleteOneRow(String row_id){
@@ -105,7 +107,9 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return sAmount;
+//        return formatter.format(Integer.parseInt(sAmount));
     }
+
     public boolean isMasterEmpty() {
 
         boolean flag;
