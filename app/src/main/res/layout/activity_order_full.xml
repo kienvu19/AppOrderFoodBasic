@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:fontFamily="@font/utm_pacific"
+            android:fontFamily="@font/lobest"
             android:gravity="center"
             android:hint="Giá SP"
             android:textColor="@color/black"

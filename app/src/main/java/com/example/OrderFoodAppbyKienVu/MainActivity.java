@@ -32,7 +32,7 @@ import kotlin.Lazy;
 public class MainActivity extends AppCompatActivity{
     private FoodAdapter foodAdapter;
     private List<Food> list;
-    private FloatingActionButton user_btn, dangxuat, shopping, history, gotouser;
+    private FloatingActionButton user_btn, dangxuat, shopping, history, gotouser, contact;
     Animation fabOpen, fabClose, Foward, BackFoward;
     Boolean show_hide_floatAction = false;
     @SuppressLint("MissingInflatedId")
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity{
         history = findViewById(R.id.history);
 
         gotouser = findViewById(R.id.gotouser);
+        contact = findViewById(R.id.contact);
 
         fabOpen = AnimationUtils.loadAnimation(this,R.anim.rotate_open);
         fabClose = AnimationUtils.loadAnimation(this,R.anim.rotate_close);
@@ -122,6 +123,12 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, RememberInfoUserActivity.class));
+            }
+        });
+        contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ContactWithMe.class));
             }
         });
     }
@@ -195,6 +202,7 @@ public class MainActivity extends AppCompatActivity{
             shopping.startAnimation(fabClose);
             history.startAnimation(fabClose);
             gotouser.startAnimation(fabClose);
+            contact.startAnimation(fabClose);
             dangxuat.setClickable(false);
             shopping.setClickable(false);
             show_hide_floatAction = false;
@@ -204,6 +212,7 @@ public class MainActivity extends AppCompatActivity{
             shopping.startAnimation(fabOpen);
             history.startAnimation(fabOpen);
             gotouser.startAnimation(fabOpen);
+            contact.startAnimation(fabOpen);
             dangxuat.setClickable(true);
             shopping.setClickable(true);
             show_hide_floatAction = true;

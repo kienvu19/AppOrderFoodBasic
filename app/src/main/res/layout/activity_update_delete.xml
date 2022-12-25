@@ -31,7 +31,7 @@
 
     <LinearLayout
         android:id="@+id/layoutchinh"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:layout_gravity="center"
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/textmonan"
-                android:fontFamily="@font/utm_pacific"
+                android:fontFamily="@font/lobest"
                 android:hint="Tên"
                 android:textSize="40dp" />
         </LinearLayout>
@@ -90,7 +90,7 @@
                     android:id="@+id/SL_input2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/utm_pacific"
+                    android:fontFamily="@font/lobest"
                     android:textColor="@color/black"
                     android:layout_marginLeft="30dp"
                     android:layout_toRightOf="@id/imgtru"
@@ -129,7 +129,7 @@
                     android:id="@+id/price_input2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/utm_pacific"
+                    android:fontFamily="@font/lobest"
                     android:textColor="@color/black"
                     android:layout_toRightOf="@id/textgia"
                     android:layout_marginLeft="10dp"

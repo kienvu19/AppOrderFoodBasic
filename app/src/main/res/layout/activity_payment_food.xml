@@ -189,7 +189,7 @@
             android:hint="Tổng"
             android:gravity="center"
             android:textColor="@color/black"
-            android:fontFamily="@font/utm_pacific"
+            android:fontFamily="@font/lobest"
             android:textSize="30dp">
         </TextView>
 <!--        <TextView-->

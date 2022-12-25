@@ -62,6 +62,25 @@
         tools:ignore="RelativeOverlap" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/user"
+        android:layout_alignEnd="@+id/user"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="369dp"
+        android:clickable="true"
+        android:contentDescription="@string/action_search"
+        android:focusable="true"
+        android:src="@drawable/contact"
+
+        android:visibility="invisible"
+        app:backgroundTint="@color/orange"
+        tools:ignore="RelativeOverlap" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/donhang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
