@@ -46,16 +46,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_marginTop="40dp"
+        android:weightSum="3"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingBottom="10dp"
-            android:layout_marginLeft="30dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:layout_height="wrap_content">
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/ic_fb"
@@ -65,10 +63,8 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -79,10 +75,8 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -91,23 +85,19 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_zalo" />
         </LinearLayout>
-
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:weightSum="3"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="wrap_content"
-            android:paddingLeft="20dp"
-            android:layout_marginLeft="30dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:layout_height="wrap_content">
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/ic_skype"
@@ -117,10 +107,8 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -131,10 +119,8 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -143,5 +129,5 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_callphone" />
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
 </LinearLayout>
