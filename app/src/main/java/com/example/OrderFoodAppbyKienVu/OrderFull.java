@@ -157,7 +157,7 @@ public class OrderFull extends AppCompatActivity{
 
 // set dialog message
         alertDialogBuilder
-                .setMessage("Bạn có muốn dùng thông tin mà bạn đã setup không?")
+                .setMessage("Bạn có muốn dùng thông tin đã có không?")
                 .setCancelable(false)
                 .setPositiveButton("CÓ", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
