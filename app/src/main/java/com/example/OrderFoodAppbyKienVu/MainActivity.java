@@ -68,21 +68,21 @@ public class MainActivity extends AppCompatActivity{
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         rc_Foods.addItemDecoration(itemDecoration);
 
-        rc_Foods.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                if(dy > 0){
-                    user_btn.hide();
-                    dangxuat.hide();
-                    shopping.hide();
-                    history.hide();
-                    gotouser.hide();
-                }else{
-                    user_btn.show();
-                }
-                super.onScrolled(recyclerView, dx, dy);
-            }
-        });
+//        rc_Foods.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//            @Override
+//            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+//                if(dy > 0){
+//                    user_btn.hide();
+//                    dangxuat.hide();
+//                    shopping.hide();
+//                    history.hide();
+//                    gotouser.hide();
+//                }else{
+//                    user_btn.show();
+//                }
+//                super.onScrolled(recyclerView, dx, dy);
+//            }
+//        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

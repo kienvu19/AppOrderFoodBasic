@@ -53,7 +53,7 @@
 
         android:clickable="true"
         android:contentDescription="@string/action_search"
-
+        android:visibility="invisible"
         android:focusable="true"
         android:src="@drawable/dangxuat"
         app:backgroundTint="@color/orange"
@@ -72,6 +72,7 @@
         android:clickable="true"
         android:contentDescription="@string/action_search"
         android:focusable="true"
+        android:visibility="invisible"
         android:src="@drawable/contact"
         app:backgroundTint="@color/orange"
         tools:ignore="RelativeOverlap" />
@@ -87,6 +88,7 @@
         android:clickable="true"
         android:contentDescription="@string/action_search"
         android:focusable="true"
+        android:visibility="invisible"
         android:src="@drawable/giohangpng"
         app:backgroundTint="@color/orange"
         tools:ignore="RelativeOverlap" />
@@ -102,6 +104,7 @@
         android:clickable="true"
         android:contentDescription="@string/action_search"
         android:focusable="true"
+        android:visibility="invisible"
         android:src="@drawable/historydathang"
         app:backgroundTint="@color/orange"
         tools:ignore="RelativeOverlap" />
@@ -112,6 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/user"
         android:layout_alignParentEnd="true"
+        android:visibility="invisible"
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="15dp"
         android:clickable="true"
