@@ -46,7 +46,7 @@ public class ResetPassUserActivity extends AppCompatActivity {
                 String password = pass.getText().toString();
                 String repassword = repass.getText().toString();
                 if(password.length() < 8){
-                    Toast.makeText(ResetPassUserActivity.this, "Mật khẩu không nhỏ hơn 8 ký tự.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ResetPassUserActivity.this, "Mật khẩu phải lớn hơn 8 ký tự!", Toast.LENGTH_SHORT).show();
                 }
                 else if(password.equals(repassword)){
                     Boolean checkpasswordupdate = DB.updatepassword(user,password);
@@ -58,7 +58,7 @@ public class ResetPassUserActivity extends AppCompatActivity {
                         Toast.makeText(ResetPassUserActivity.this, "Cập nhật mật khẩu thất bại.", Toast.LENGTH_SHORT).show();
                     }
                 }else{
-                    Toast.makeText(ResetPassUserActivity.this, "Mật khẩu không giống nhau", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ResetPassUserActivity.this, "Mật khẩu nhập lại không đúng!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

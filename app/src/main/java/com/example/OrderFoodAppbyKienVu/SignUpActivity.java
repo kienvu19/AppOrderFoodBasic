@@ -39,7 +39,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if (user.equals("") || pass1.equals("") || repass1.equals("")){
                     Toast.makeText(SignUpActivity.this, "Vui lòng điền tất cả ô trống.", Toast.LENGTH_SHORT).show();
                 }else if(pass1.length() < 8){
-                    Toast.makeText(SignUpActivity.this, "Mật khẩu không nhỏ hơn 8 ký tự", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Mật khẩu phải lớn hơn 8 ký tự!", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     if (pass1.equals(repass1)) {
@@ -51,10 +51,10 @@ public class SignUpActivity extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                 startActivity(intent);
                             }else {
-                                Toast.makeText(SignUpActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, "Đăng ký thất bại.", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(SignUpActivity.this, "Người dùng đã tồn tại! Vui lòng đăng nhập.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, "Người dùng đã tồn tại!", Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         Toast.makeText(SignUpActivity.this, "Mật khẩu không khớp.", Toast.LENGTH_SHORT).show();
