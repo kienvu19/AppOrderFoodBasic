@@ -80,7 +80,10 @@ public class UpdateDeleteActivity extends AppCompatActivity {
                 soluongx--;
                 if(soluongx<1){
 //                    Toast.makeText(UpdateDeleteActivity.this, "Không nhỏ hơn 1", Toast.LENGTH_SHORT).show();
-                    confirmDialog();
+//                    confirmDialog();
+                    DBHelper myDB = new DBHelper(UpdateDeleteActivity.this);
+                    myDB.deleteOneRow(id);
+                    finish();
                 }
                 else{
                     sl_input.setText(String.valueOf(soluongx));

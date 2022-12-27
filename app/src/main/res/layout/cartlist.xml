@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/suamonanfix"></ImageView>
+            android:background="@drawable/suamonan"></ImageView>
 
         <LinearLayout
             android:layout_width="match_parent"

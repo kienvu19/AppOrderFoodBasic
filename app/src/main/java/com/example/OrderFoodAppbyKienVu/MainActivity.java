@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import kotlin.Lazy;
 
 public class MainActivity extends AppCompatActivity{
     private FoodAdapter foodAdapter;
@@ -42,8 +41,6 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Locale localeVN = new Locale("vi", "VN");
-        NumberFormat currencyVN = NumberFormat.getCurrencyInstance(localeVN);
 
         SearchView searchView = findViewById(R.id.SearchView);
         searchView.clearFocus();
