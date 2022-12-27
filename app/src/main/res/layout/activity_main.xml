@@ -38,7 +38,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="@string/action_search"
-        android:src="@drawable/ic_user"
+        android:src="@drawable/stpng"
         app:backgroundTint="@color/orange"
         tools:ignore="RelativeOverlap" />
 
@@ -73,7 +73,7 @@
         android:contentDescription="@string/action_search"
         android:focusable="true"
         android:visibility="invisible"
-        android:src="@drawable/contact"
+        android:src="@drawable/infomationuser"
         app:backgroundTint="@color/orange"
         tools:ignore="RelativeOverlap" />
 
@@ -121,7 +121,7 @@
         android:clickable="true"
         android:contentDescription="@string/action_search"
         android:focusable="true"
-        android:src="@drawable/infomationuser"
+        android:src="@drawable/contact"
         app:backgroundTint="@color/orange"
         tools:ignore="RelativeOverlap" />
 </RelativeLayout>
