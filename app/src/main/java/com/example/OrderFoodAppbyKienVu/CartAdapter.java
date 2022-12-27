@@ -27,12 +27,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
     private final ArrayList food_id;
     private final ArrayList food_title;
     private final ArrayList food_sl;
-    private final ArrayList<Long> food_price;
+    private final ArrayList food_price;
 
     Locale localeVN = new Locale("vi", "VN");
     NumberFormat currencyVN = NumberFormat.getCurrencyInstance(localeVN);
 
-    public CartAdapter(Context context, Activity activity, ArrayList food_id, ArrayList food_title, ArrayList food_sl, ArrayList<Long> food_price) {
+    public CartAdapter(Context context, Activity activity, ArrayList food_id, ArrayList food_title, ArrayList food_sl, ArrayList food_price) {
         this.context = context;
         this.activity = activity;
         this.food_id = food_id;
@@ -51,11 +51,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(@NonNull CartAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.food_id_txt.setText(String.valueOf(food_id.get(position)));
+//        holder.food_id_txt.setText(String.valueOf(food_id.get(position)));
         holder.food_title_txt.setText(String.valueOf(food_title.get(position)));
         holder.food_sl_txt.setText(String.valueOf(food_sl.get(position)));
 //        holder.food_price_txt.setText(String.valueOf(food_price.get(position)));
-
         holder.food_price_txt.setText(currencyVN.format(food_price.get(position)));
         //Recyclerview onClickListener
         holder.layout.setOnClickListener(new View.OnClickListener() {

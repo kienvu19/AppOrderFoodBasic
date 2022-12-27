@@ -61,7 +61,7 @@ public class ContactWithMe extends AppCompatActivity {
     }
     private void confirmDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("THÔNG TIN NHÀ PHÁT TRIỂN");
+        builder.setTitle("THÔNG TIN");
         builder.setMessage("Vui lòng liên hệ với tôi: "+"\n Zalo: 0398194201 \n Telegram: @kienvu19 \n Skype: 0398194201");
         builder.setPositiveButton("OK", (dialogInterface, i) -> {
 

@@ -107,7 +107,6 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return sAmount;
-//        return formatter.format(Integer.parseInt(sAmount));
     }
 
     public boolean isMasterEmpty() {

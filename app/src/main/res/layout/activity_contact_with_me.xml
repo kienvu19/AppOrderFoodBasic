@@ -38,9 +38,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:fontFamily="@font/utm_pacific"
             android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="Mọi thắc mắc vui lòng liên hệ với tôi!">
+            android:textSize="20dp"
+            android:text="CONTACT WITH ME">
         </TextView>
     </LinearLayout>
     <LinearLayout

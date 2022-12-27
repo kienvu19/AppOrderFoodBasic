@@ -137,12 +137,7 @@ public class MainActivity extends AppCompatActivity{
                 filteredList.add(food);
             }
         }
-        if(filteredList.isEmpty()){
-            Toast.makeText(this,"No data found", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            foodAdapter.setFilteredList(filteredList);
-        }
+        foodAdapter.setFilteredList(filteredList);
     }
     public List<Food> getListFoods() {
         list = new ArrayList<>();
@@ -226,7 +221,7 @@ public class MainActivity extends AppCompatActivity{
         alertDialogBuilder
                 .setMessage("Bạn có chắc chắn muốn thoát?")
                 .setCancelable(false)
-                .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                .setPositiveButton("CÓ", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
                                         int id) {
                         // what to do if YES is tapped
@@ -235,7 +230,7 @@ public class MainActivity extends AppCompatActivity{
                     }
                 });
 
-        alertDialogBuilder.setNeutralButton("CANCEL", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNeutralButton("HỦY", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
                                         int id) {
                         // code to do on CANCEL tapped
@@ -243,7 +238,7 @@ public class MainActivity extends AppCompatActivity{
                     }
                 });
 
-        alertDialogBuilder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton("KHÔNG", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // code to do on NO tapped
                         dialog.cancel();

@@ -54,7 +54,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         }
         holder.imgFood.setImageResource(food.getImage());
         holder.tvName.setText(food.getName());
-//        holder.tvGia.setText(String.valueOf(food.getGia()));
         holder.tvGia.setText(currencyVN.format(food.getGia()));
         holder.tvGt.setText(food.getGioithieu());
         holder.layout_item.setOnClickListener(view -> onClickGoToDetail(food));

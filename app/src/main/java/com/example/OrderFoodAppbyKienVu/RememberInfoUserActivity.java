@@ -52,9 +52,8 @@ public class RememberInfoUserActivity extends AppCompatActivity {
         builder.setTitle("Xác nhận thông tin");
         builder.setMessage("Kiểm tra lại thông tin!");
         builder.setPositiveButton("LƯU", (dialogInterface, i) -> {
-            finish();
             myDB.addInformationUser(edt1.getText().toString().trim(), edt2.getText().toString().trim(), edt3.getText().toString().trim());
-//            startActivity(new Intent(RememberInfoUserActivity.this, ShowInfoUserRememberActivity.class));
+            finish();
         });
         builder.setNegativeButton("HỦY", (dialogInterface, i) -> {
 

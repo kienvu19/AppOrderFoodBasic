@@ -66,10 +66,7 @@ public class OrderFull extends AppCompatActivity{
 
 
         String tongtien = myDB.getPrice();
-//        textView.setText(String.format("%s", myDB.getPrice()));
-//        textView.setText(formatter.format(myDB.getPrice()));
         textView.setText(currencyVN.format(Integer.parseInt(tongtien)));
-//        textView.setText(myDB.getPrice());
 
         Intent i = new Intent(OrderFull.this, InfoUserAdapter.class);
         String thanhtien = textView.getText().toString().trim();
@@ -90,14 +87,10 @@ public class OrderFull extends AppCompatActivity{
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent i = new Intent(OrderFull.this, PaymentFood.class);
-//                String thanhtien = textView.getText().toString().trim();
-//                i.putExtra("total", thanhtien);
                 if(myDB.isMasterEmpty()){
-                    Toast.makeText(OrderFull.this, "Ôi bạn ôi giỏ hàng không có gì!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OrderFull.this, "Giỏ hàng rỗng!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-//                    startActivity(i);
                     selectDialog();
                 }
             }
@@ -114,7 +107,7 @@ public class OrderFull extends AppCompatActivity{
     void storeDataInArrays(){
         Cursor cursor = myDB.readAllFood();
         if(cursor.getCount() == 0){
-            Toast.makeText(OrderFull.this, "Giỏ hàng chưa có gì!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(OrderFull.this, "Giỏ hàng rỗng!", Toast.LENGTH_SHORT).show();
         }
         else {
             while (cursor.moveToNext()){
@@ -128,7 +121,7 @@ public class OrderFull extends AppCompatActivity{
     void confirmDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Xác nhận xóa tất cả!");
-        builder.setMessage("Bạn có muốn xóa hết tất cả món ăn đã order?");
+        builder.setMessage("Bạn có muốn xóa hết tất cả món ăn trong giỏ hàng?");
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -168,7 +161,7 @@ public class OrderFull extends AppCompatActivity{
                         Intent j = new Intent(OrderFull.this, PaymentFood.class);
                         j.putExtra("total", thanhtien);
                         if(myDB.isMasterEmpty()){
-                            Toast.makeText(OrderFull.this, "Ôi bạn ôi giỏ hàng không có gì!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(OrderFull.this, "Giỏ hàng rỗng!", Toast.LENGTH_SHORT).show();
                         }
                         else{
                             startActivity(i);
@@ -176,7 +169,7 @@ public class OrderFull extends AppCompatActivity{
                     }
                 });
 
-        alertDialogBuilder.setNeutralButton("CANCEL", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNeutralButton("HỦY", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog,
                                 int id) {
                 // code to do on CANCEL tapped

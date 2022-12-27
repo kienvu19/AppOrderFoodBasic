@@ -66,8 +66,7 @@ public class PaymentFood extends AppCompatActivity {
         edt_disc.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//              total.setText(String.valueOf(Integer.parseInt(a)));
-                total.setText(String.valueOf(currencyVN.format(Integer.parseInt(a))));
+                total.setText(currencyVN.format(Integer.parseInt(a)));
             }
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -75,8 +74,7 @@ public class PaymentFood extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 if(edt_disc.getText().toString().equals("kienvu")){
-//                    total.setText(String.valueOf(Integer.parseInt(a)-50000));
-                    total.setText(String.valueOf(currencyVN.format(x*y)));
+                    total.setText(currencyVN.format(x * y));
                     Toast.makeText(PaymentFood.this, "Quý khách được giảm 10%!",Toast.LENGTH_SHORT).show();
                 }
             }
@@ -116,7 +114,7 @@ public class PaymentFood extends AppCompatActivity {
         String a = total.getText().toString().trim();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Xác nhận thanh toán");
-        builder.setMessage("Tổng số tiền bạn phải thanh toán: "+a+"\nChân thành cảm quý khách!\n Hẹn gặp lại lần sau!");
+        builder.setMessage("Tổng số tiền phải thanh toán: "+a+"\nChân thành cảm quý khách\nHẹn gặp lại lần sau!");
         builder.setPositiveButton("THANH TOÁN", (dialogInterface, i) -> {
             DBFood.deleteAllData();
             startActivity(new Intent(PaymentFood.this, DoneOrderFood.class));
@@ -125,6 +123,7 @@ public class PaymentFood extends AppCompatActivity {
             }else{
                 DBHistory.addInformationUser(nameuser.getText().toString().trim(), adduser.getText().toString().trim(), numberphoneuser.getText().toString().trim(), edt_disc.getText().toString().trim(), thenganhang.getText().toString().trim(), total.getText().toString().trim());
             }
+            finish();
         });
         builder.setNegativeButton("HỦY", (dialogInterface, i) -> {
 

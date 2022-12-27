@@ -57,13 +57,9 @@ public class UpdateDeleteActivity extends AppCompatActivity {
                 getIntent().hasExtra("price");
                 price = getIntent().getStringExtra("price");
                 long price_goc = Integer.parseInt(price) / Integer.parseInt(sl);
-
                 title = title_input.getText().toString().trim();
                 sl = sl_input.getText().toString().trim();
-//                price = price_input.getText().toString().trim();
                 long updateprice = price_goc * Integer.parseInt(sl);
-
-//                int price_tong = Integer.parseInt(price) * Integer.parseInt(sl);
                 myDB.updateData(id, title, sl, String.valueOf(updateprice));
                 finish();
             }
@@ -79,16 +75,11 @@ public class UpdateDeleteActivity extends AppCompatActivity {
 
                 soluongx--;
                 if(soluongx<1){
-//                    Toast.makeText(UpdateDeleteActivity.this, "Không nhỏ hơn 1", Toast.LENGTH_SHORT).show();
-//                    confirmDialog();
-                    DBHelper myDB = new DBHelper(UpdateDeleteActivity.this);
-                    myDB.deleteOneRow(id);
-                    finish();
+                    confirmDialog();
                 }
                 else{
                     sl_input.setText(String.valueOf(soluongx));
                     long tienmonan = soluongx * price_goc;
-//                    price_input.setText(String.valueOf(tienmonan));
                     price_input.setText(currencyVN.format(tienmonan));
                 }
             }
@@ -102,15 +93,9 @@ public class UpdateDeleteActivity extends AppCompatActivity {
                 String soluong = sl_input.getText().toString().trim();
                 long soluongx = Integer.parseInt(soluong);
                 soluongx++;
-//                if(soluongx>20){
-//                    Toast.makeText(UpdateDeleteActivity.this, "Không lớn hơn 20", Toast.LENGTH_SHORT).show();
-//                }
-//                else{
-                    sl_input.setText(String.valueOf(soluongx));
-                    long tienmonan = soluongx * price_goc;
-//                    price_input.setText(String.valueOf(tienmonan));
-                    price_input.setText(currencyVN.format(tienmonan));
-//                }
+                sl_input.setText(String.valueOf(soluongx));
+                long tienmonan = soluongx * price_goc;
+                price_input.setText(currencyVN.format(tienmonan));
             }
         });
     }
